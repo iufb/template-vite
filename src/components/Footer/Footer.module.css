@@ -1,0 +1,57 @@
+.footer {
+  margin-top: 40px;
+  background-color: var(--color-primary);
+  padding: 20px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.left,
+.middle,
+.right {
+  flex: 1;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.linksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.mapContainer {
+  margin-top: 20px;
+  padding-bottom: 50%;
+  position: relative;
+}
+.mapContainer iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  position: absolute;
+}
+@media screen and (max-width: 750px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .middle {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .right {
+    flex-direction: column;
+  }
+}

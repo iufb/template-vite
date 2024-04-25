@@ -1,0 +1,128 @@
+.wrapper {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--color-base);
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: 100;
+}
+.nav {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.applicationBtn {
+  display: block;
+}
+.logoWrapper {
+  width: 70px;
+  height: 70px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  min-width: 60px;
+  min-height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.burger {
+  display: none;
+}
+
+.slider {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+
+  border-radius: 20px;
+}
+.slider::after {
+  position: absolute;
+  content: attr(data-notactive);
+  height: 26px;
+  color: var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+
+  border-radius: 10px;
+}
+.slider::before {
+  position: absolute;
+  content: attr(data-lang);
+  height: 26px;
+  color: var(--color-primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+
+  border-radius: 10px;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+  transition: transform 0.1s ease-out;
+}
+input:not(:checked) + .slider:before {
+  transform: translateX(0);
+  transition: transform 0.1s ease-out;
+}
+input:not(:checked) + .slider:after {
+  transform: translateX(26px);
+  transition: transform 0.1s ease-out;
+}
+input:checked + .slider:after {
+  transform: translateX(0);
+  transition: transform 0.1s ease-out;
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .buttons {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}

@@ -1,0 +1,52 @@
+.wrapper {
+  background-color: inherit;
+  border: none;
+}
+.wrapper > svg {
+  fill: var(--color-primary);
+}
+.menu {
+  animation: fadein 0.2s ease-in-out;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2000;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 70%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+.link a {
+  color: var(--color-base);
+  font-size: 20px;
+}
+.close {
+  color: var(--color-base);
+  background-color: inherit;
+  border: none;
+  font-size: 35px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+@keyframes fadein {
+  from {
+    transform: translateX(360px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

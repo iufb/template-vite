@@ -1,0 +1,41 @@
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.noScroll {
+  overflow: hidden;
+}
+.error,
+.success {
+  overflow: hidden;
+  min-height: 20px;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.error {
+  color: #d8000c;
+  background-color: #ffbaba;
+}
+.success {
+  color: #270;
+  background-color: #dff2bf;
+}
+label {
+  font-weight: bold;
+}
+:root {
+  font-family: "M PLUS Rounded 1c", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-primary: #5d2c2c;
+  --color-base: #fefefe;
+  --color-secondary: #d7907b;
+  --color-gray: #ced4da;
+}
